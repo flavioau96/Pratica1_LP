@@ -1,0 +1,17 @@
+
+
+def calcular_consumo(tempo, velocidade_media, km_por_litro):
+    distancia = tempo * velocidade_media
+    consumo = distancia / km_por_litro
+    return consumo
+
+
+tempo = float(input("Digite o tempo gasto na viagem (em horas): "))
+velocidade_media = float(input("Digite a velocidade média (em km/h): "))
+km_por_litro = float(input("Digite o consumo médio do veículo (em km/l): "))
+
+consumo_final = calc_consumo(tempo, velocidade_media, km_por_litro)
+
+print(f"O consumo de combustível total é de {consumo_final:.2f} litros.")
+
+
