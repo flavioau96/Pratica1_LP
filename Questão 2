@@ -1,0 +1,26 @@
+def substituir_vogais_por_asterisco(texto):
+    vogais = "aeiouAEIOU"
+    novo_texto = ""
+    for char in texto:
+        if char in vogais:
+            novo_texto += '*'
+        else:
+            novo_texto += char
+    return novo_texto
+
+placa = input("Digite a placa do carro: ")
+ano_fabricacao = int(input("Digite o ano de fabricação do carro: "))
+
+if ano_fabricacao < 2010:
+    situacao = "Carro Velho"
+elif 2011 <= ano_fabricacao <= 2021:
+    situacao = "Carro Semi novo"
+elif ano_fabricacao == 2022:
+    situacao = "Carro Novo"
+else:
+    situacao = "Situação desconhecida"
+
+placa_substituida = substituir_vogais_por_asterisco(placa)
+
+print(f"Situação do carro: {situacao}")
+print(f"Placa com vogais substituídas: {placa_substituida}")
